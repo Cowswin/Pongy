@@ -3,10 +3,11 @@ import pygame, sys
 def main():
     pygame.init()
     # Display Creation
-    DISPLAY = pygame.display.set_mode((640, 480), 0, 32)
+    DISPLAY = pygame.display.set_mode((640, 480))
     pygame.display.set_caption('Pongy')
-    # TODO make an icon
-    # pygame.display.set_icon('assets/gfx/icon.png')
+    # Loading and Displaying of Icon
+    displayIcon = pygame.image.load('assets/gfx/icon.png')
+    pygame.display.set_icon(displayIcon)
     # Clock Creation
     CLOCK = pygame.time.Clock()
     # Color Constants
@@ -21,8 +22,8 @@ def main():
                 sys.exit()
 
         DISPLAY.fill(BLACK)
-        # Display Update
-        pygame.display.update()
+        # Update Display
+        pygame.display.flip()
         CLOCK.tick(60)
 
 if __name__ == "__main__":
