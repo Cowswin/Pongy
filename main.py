@@ -10,9 +10,6 @@ def main():
     pygame.display.set_icon(displayIcon)
     # Clock Creation
     CLOCK = pygame.time.Clock()
-    # Color Constants
-    WHITE = (255, 255, 255)
-    BLACK = (0, 0, 0)
 
     while True:
         # If the player presses the button
@@ -21,7 +18,7 @@ def main():
                 pygame.quit()
                 sys.exit()
 
-        DISPLAY.fill(BLACK)
+        DISPLAY.fill((0, 0, 0))
         # Update Display
         pygame.display.flip()
         CLOCK.tick(60)
